@@ -38,6 +38,10 @@ describe Card do
     it "determines one card is not less than the other" do
       expect(card < card3).to be_falsey
     end
+
+    it "returns false if cards are equal" do
+      expect(card < card2).to be_falsey
+    end
   end
 
   describe "#>" do
@@ -47,6 +51,10 @@ describe Card do
     it "determines one card is not more than the other" do
       expect(card3 > card).to be_falsey
     end
+    it "returns false if cards are equal" do
+      expect(card > card2).to be_falsey
+    end
+
   end
 
 

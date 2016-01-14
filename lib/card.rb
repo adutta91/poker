@@ -40,6 +40,20 @@ class Card
     self.value == card.value
   end
 
+  def <=> card
+    if self.value > card.value
+      1
+    elsif self.value < card.value
+      -1
+    else
+      0
+    end
+  end
+
+  def hard_equal?(card)
+    self.value == card.value && self.suite == card.suite
+  end
+
   def to_s
     "#{VALUES[value]}#{SUITES[suite]}"
   end
